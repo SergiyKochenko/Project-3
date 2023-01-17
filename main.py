@@ -2,7 +2,7 @@ from tkinter import *
 
 window = Tk()
 
-window.geometry("400x470")
+window.geometry("500x550")
 window.resizable(0, 0)
 window.title("Pixel Calculator")
 
@@ -14,7 +14,7 @@ b_frame.pack()
 
 
 count_text = StringVar()
-entry = Entry(in_frame, font=("Helvetica", 20, "bold"), textvariable=count_text, width=70, justify=RIGHT)
+entry = Entry(in_frame, font=("Helvetica", 50, "bold"), textvariable=count_text, width=70, justify=RIGHT)
 entry.grid(row=0, column=0)
 entry.pack(ipady=14)
 
@@ -44,8 +44,8 @@ def create_button(parent, text, row, column, command, width=13, columnspan=1):
   )
   btn.grid(row=row, column=column, columnspan=columnspan, padx=1, pady=1)
 
-create_button(b_frame, "C", 0,0, lambda: button_click("C"), width=42, columnspan=3)
-create_button(b_frame, "0", 4,0, lambda: button_click(0), width=27, columnspan=2)
+create_button(b_frame, "C", 0,0, lambda: button_click("C"), width=46, columnspan=3)
+create_button(b_frame, "0", 4,0, lambda: button_click(0), width=30, columnspan=2)
 create_button(b_frame, ".", 4,2, lambda: button_click("."))
 
 operations = ["/", "*", "+", "-", "="]
